@@ -128,9 +128,9 @@ const movieStore = {
                 }
                 const movies = serializeResponse(response.Search);
                 commit(MOVIES, movies);
-            } catch (error) {
+            } catch (err) {
                 dispatch("showNotify", {
-                    msg: error.message,
+                    msg: err.message,
                     title: "Error",
                     variant: "danger"
                 }, {

@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import {mapGetters} from 'vuex';
+import { mapGetters } from 'vuex';
 
 export default {
     name: "Notification",
@@ -14,10 +14,10 @@ export default {
         massagePool: "showNotification"
     },
     methods: {
-        showNotification({variant, msg, title}){
+        showNotification({variant, msg, title}) {
             this.$bvToast.toast(msg, {
-                title,
-                variant,
+                title: title,
+                variant: variant,
                 solid: true
             });
         }
